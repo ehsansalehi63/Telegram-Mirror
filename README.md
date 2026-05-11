@@ -1,83 +1,112 @@
-# 📡 TG Reader — خواندن کانال‌های تلگرام بدون فیلتر
+<div align="center">
 
-> مشاهده پیام‌ها، عکس‌ها و ویدیوهای کانال‌های عمومی تلگرام از طریق GitHub Pages — بدون نیاز به VPN
+<img src="https://img.shields.io/badge/version-2.0-blue?style=flat-square" alt="version"/>
 
-[![GitHub Actions](https://img.shields.io/badge/Powered%20by-GitHub%20Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/features/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+# 📡 TG Reader
+
+### کانال‌های تلگرام را بدون فیلتر، مستقیم از GitHub بخوانید
+
+[![GitHub Actions](https://img.shields.io/badge/Powered%20by-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+[![فارسی](https://img.shields.io/badge/زبان-فارسی-dc2626?style=for-the-badge)](README.md)
+
+**بدون VPN · بدون نصب · بدون API Token**
+
+</div>
+
+---
+
+## 🧠 چطور کار می‌کنه؟
+
+یه GitHub Action داری که هر وقت بخوای اجراش کنی — نام کانال تلگرام رو بهش میدی، اون پیام‌ها و عکس‌ها رو می‌گیره و به شکل یه فایل Markdown داخل مخزن ذخیره می‌کنه. بعدش مستقیم از `github.com` قابل خوندنه.
+
+```
+تلگرام  ──►  GitHub Action  ──►  فایل .md داخل مخزن  ──►  کاربر روی github.com می‌خونه
+```
 
 ---
 
 ## ✨ قابلیت‌ها
 
-- 📨 خواندن ۱۰۰ پیام آخر هر کانال عمومی تلگرام
-- 🖼 نمایش عکس، ویدیو، فایل، استیکر، و پول
-- ⬇ دانلود مستقیم عکس و ویدیو
-- 🎨 طراحی شبیه تلگرام (دارک مود)
-- 🔍 لایت‌باکس برای مشاهده بزرگ عکس‌ها
-- ⚡ بدون نیاز به API Token یا ربات
+- 📨 دریافت تا **۲۰۰ پیام** از هر کانال عمومی
+- 🖼 نمایش **عکس و آلبوم** مستقیم داخل صفحه
+- 📊 نمایش **نظرسنجی‌ها**
+- ↪ نمایش **پیام‌های فوروارد شده**
+- 📄 نمایش **فایل‌ها و اسناد**
+- 👁 نمایش **تعداد بازدید** و تاریخ هر پیام
+- ⚡ بدون نیاز به هیچ‌گونه توکن یا ربات
 
 ---
 
-## 🚀 راه‌اندازی
+## 🚀 راه‌اندازی (یک‌بار، ۲ دقیقه)
 
-### ۱. Fork کردن این مخزن
+### ۱. Fork کردن مخزن
 
-روی دکمه **Fork** کلیک کنید.
+روی دکمه **Fork** در بالای صفحه کلیک کنید.
 
-### ۲. فعال کردن GitHub Pages
+### ۲. دادن مجوز به Actions
 
-به `Settings → Pages` بروید و:
-- **Source:** را روی `GitHub Actions` قرار دهید
+وارد مخزن Fork شده‌تان بشید و برید به:
 
-### ۳. دادن مجوز به Actions
+```
+Settings → Actions → General → Workflow permissions
+```
 
-به `Settings → Actions → General` بروید:
-- **Workflow permissions:** را روی **Read and write permissions** قرار دهید
+گزینه **Read and write permissions** را انتخاب و ذخیره کنید.
 
-### ۴. اجرا کردن
+### ۳. تمام! حالا استفاده کنید ↓
 
-به تب **Actions** بروید:
+---
+
+## 📖 استفاده
+
+به تب **Actions** مخزن خود بروید:
+
 1. روی **📡 Fetch Telegram Channel** کلیک کنید
 2. روی **Run workflow** کلیک کنید
-3. نام کانال را بدون `@` وارد کنید (مثال: `bbcpersian`)
-4. تعداد پیام را انتخاب کنید (پیش‌فرض: ۱۰۰)
+3. نام کانال را **بدون @** وارد کنید
+
+   ```
+   مثال: bbcpersian
+   ```
+
+4. تعداد پیام را وارد کنید (پیش‌فرض: ۱۰۰)
 5. **Run workflow** را بزنید
 
-### ۵. مشاهده نتیجه
-
-پس از اجرا، به آدرس GitHub Pages خود بروید:
-```
-https://[username].github.io/[repo-name]
-```
+پس از چند ثانیه، فایل داخل پوشه `channels/` در مخزن ذخیره می‌شود و از همانجا قابل خواندن است.
 
 ---
 
-## 📋 کانال‌های پشتیبانی‌شده
-
-فقط کانال‌های **عمومی** تلگرام پشتیبانی می‌شوند.
-
----
-
-## ⚙️ تنظیمات
-
-| پارامتر | پیش‌فرض | توضیح |
-|---------|---------|-------|
-| `channel` | الزامی | نام کانال بدون @ |
-| `count` | 100 | تعداد پیام (۱۰ تا ۲۰۰) |
-
----
-
-## 🛠 ساختار پروژه
+## 📁 ساختار مخزن
 
 ```
+telegram-reader/
 ├── .github/
 │   └── workflows/
-│       └── fetch.yml        # GitHub Actions workflow
+│       └── fetch.yml          ← GitHub Action اصلی
 ├── scripts/
-│   ├── fetch_channel.py     # اسکریپت دریافت پیام‌ها
-│   └── template.html        # قالب HTML
+│   └── fetch_channel.py       ← اسکریپت دریافت پیام‌ها
+├── channels/
+│   └── bbcpersian_2025-...md  ← فایل‌های ذخیره‌شده کانال‌ها
 └── README.md
 ```
+
+---
+
+## ⚙️ پارامترها
+
+| پارامتر | مقدار پیش‌فرض | توضیح |
+|:-------:|:------------:|:------|
+| `channel` | — | نام کانال بدون `@` (اجباری) |
+| `count` | `100` | تعداد پیام — بین ۱۰ تا ۲۰۰ |
+
+---
+
+## ⚠️ محدودیت‌ها
+
+- فقط کانال‌های **عمومی** تلگرام پشتیبانی می‌شوند
+- ویدیوها به دلیل محدودیت‌های CDN تلگرام نمایش داده نمی‌شوند — فقط لینک دانلود دارند
+- GitHub برای مخازن عمومی محدودیت حجم دارد — پوشه `channels/` را گاهی پاک‌سازی کنید
 
 ---
 
@@ -87,4 +116,14 @@ MIT License — آزاد برای استفاده شخصی و تجاری
 
 ---
 
-> ساخته شده با ❤️ برای دسترسی آزاد به اطلاعات
+<div align="center">
+
+ساخته شده با ❤️ برای دسترسی آزاد به اطلاعات
+
+---
+
+اگه این پروژه برات مفید بود، با یه ⭐ حمایت کن — انگیزه ادامه دادنمه!
+
+[![Star on GitHub](https://img.shields.io/github/stars/FALKON-CODE/telegram-reader?style=social)](https://github.com/FALKON-CODE/telegram-reader)
+
+</div>
