@@ -122,6 +122,6 @@ MIT License — آزاد برای استفاده شخصی
 
 اگه این پروژه برات مفید بود، با یه ⭐ حمایت کن — انگیزه ادامه دادنمه!
 
-[![Star on GitHub](https://img.shields.io/github/stars/FALKON-CODE/Telegram-Mirror?style=social)](https://github.com/FALKON-CODE/Telegram-Mirror)
+[![Star on GitHub](https://img.shields.io/github/stars/FALKON-CODE/Telegram-Mirror?style=social)](https://github.com/FALKON-CODE/Telegram-Mirror/stargazers)
 
 </div>
